@@ -15,7 +15,7 @@ nav {
 }
 
 ul {
-    border: 1px solid red;
+    list-style-type: none; /* to get rid of the bullets */
     flex: 1;
     max-width: 50%;
     display: flex;
@@ -30,6 +30,10 @@ ul,li {
 @media (max-width: 768px) {
     h1 {
         font-size: 4em;
+    }
+    nav, nav ul {
+        flex-direction: column;
+        align-items: center; /* align-items is used because the main axis is now vertical because of changing the direction to column */ 
     }
 }
 
