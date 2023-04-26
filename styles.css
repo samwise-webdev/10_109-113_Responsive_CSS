@@ -10,6 +10,8 @@ h1 {
 }
 nav {
     font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
 }
 
 ul,li {
@@ -18,10 +20,14 @@ ul,li {
     padding: 0;
 }
 
-@media (min-width: 600px) /*can be combind with and */ and (max-width: 800px) /*this (width related) is in reference to the viewport */ {
+@media (max-width: 768px) {
     h1 {
-        color: purple;
+        font-size: 4em;
     }
 }
 
-
+@media (max-width: 576px) {
+    h1 {
+        font-size: 3em;
+    }
+}
