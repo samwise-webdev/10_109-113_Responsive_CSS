@@ -18,5 +18,10 @@ ul,li {
     padding: 0;
 }
 
+@media (min-width: 600px) /*can be combind with and */ and (max-width: 800px) /*this (width related) is in reference to the viewport */ {
+    h1 {
+        color: purple;
+    }
+}
 
 
