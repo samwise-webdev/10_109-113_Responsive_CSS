@@ -63,3 +63,22 @@ two values: flex-grow | flex-shrink
 three values: flex-grow | flex-shrink | flex-basis
     flex: 2 2 10%;
 */
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 300px;
+    display: flex;
+}
+
+main .sidebar {
+    background-color: #6930c3;
+    border: 1px solid white;
+    flex: 1 2; /* one value = flex-grow - with no flex basis, everything will take up the same size */
+}
+
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 1 1 60%;
+}
