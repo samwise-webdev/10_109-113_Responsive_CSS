@@ -13,7 +13,9 @@ nav {
     display: flex;
     justify-content: space-between;
 }
+
 ul {
+    border: 1px solid red;
     flex: 1;
     max-width: 50%;
     display: flex;
@@ -21,7 +23,6 @@ ul {
 }
 
 ul,li {
-    display: inline;
     margin: 0;
     padding: 0;
 }
