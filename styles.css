@@ -16,6 +16,8 @@ nav {
 ul {
     flex: 1;
     max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 ul,li {
