@@ -7,7 +7,7 @@
         controls the amount of available space an element should take up. Accepts a unitless number value
 
     flex-shrink
-        if items are larger than the container, they shrink according to flex-shrink
+        governs the rate at which elements shrink if they are not small enough to fit in the container
 */
 
 body {
@@ -27,21 +27,24 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 #container div {
     width: 75px;
     height: 75px;
-    max-width: 200px; /* add this to keep the flex-grow from making elements bigger than you want them to go */
-    flex-basis: 100px; /* width that will be used when the elements are in a row. this is dependant on the MAIN AXIS (i.e. normally width would be the horizontal direction, but if the main axis changes, width won't change with it; flex-basis will*/
-    flex-grow: 1;
+    /* max-width: 300px;  add this to keep the flex-grow from making elements bigger than you want them to go. can also use min-width to keep them from getting too small */
+    min-width: 15px;
+    flex-basis: 600px; /* width that will be used when the elements are in a row. this is dependant on the MAIN AXIS (i.e. normally width would be the horizontal direction, but if the main axis changes, width won't change with it; flex-basis will*/
 }
 
-/* div:nth-of-type(1) {
-    flex-grow: 1; /* grows the element to take up all of the available space. if multiple elements have this, they will share the space. if this was applied to the container instead, all elements would share the available space 
-} */
+div:nth-of-type(1) {
+    flex-grow: 1; /* grows the element to take up all of the available space. if multiple elements have this, they will share the space. if this was applied to the container instead, all elements would share the available space */
+    flex-shrink: 2; /*this element will shrink twice as fast as the other elments */
+}
+div:nth-of-type(5) {
+    flex-grow: 2; /* with flex-wrap on, the final div will take up the entire space of the next line (until the next element gets wrapped etc ) */
+}
 
-/* div:nth-of-type(5) {
-    flex-grow: 1; /* with flex-wrap on, the final div will take up the entire space of the next line (until the next element gets wrapped etc ) 
-} */
+/* the unitless numbers in flex-grow are proportions. flex-grow: 2; would take twice as much space as flex-grow: 1; and so forth */
+
