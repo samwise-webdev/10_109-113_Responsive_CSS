@@ -40,7 +40,7 @@ h1 {
 
 div:nth-of-type(1) {
     flex-grow: 1; /* grows the element to take up all of the available space. if multiple elements have this, they will share the space. if this was applied to the container instead, all elements would share the available space */
-    flex-shrink: 2; /*this element will shrink twice as fast as the other elments */
+    flex-shrink: 2; /*this element will shrink twice as fast as the other elments. you can add a flex-shrink of 0 to keep it from shrinking at all */
 }
 div:nth-of-type(5) {
     flex-grow: 2; /* with flex-wrap on, the final div will take up the entire space of the next line (until the next element gets wrapped etc ) */
@@ -48,3 +48,18 @@ div:nth-of-type(5) {
 
 /* the unitless numbers in flex-grow are proportions. flex-grow: 2; would take twice as much space as flex-grow: 1; and so forth */
 
+/* a shorthand property called flex exists. 
+
+one value with a unitless number: flex grow
+    flex: 10em;
+    flex: 30%; etc
+
+two values: flex-grow | flex-basis
+    flex: 1 30px
+
+two values: flex-grow | flex-shrink
+    flex: 2 2;
+
+three values: flex-grow | flex-shrink | flex-basis
+    flex: 2 2 10%;
+*/
